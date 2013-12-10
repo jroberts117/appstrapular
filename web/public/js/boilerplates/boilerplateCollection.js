@@ -1,6 +1,6 @@
 define([
   'core',
-  'mv/js/boilerplates/boilerplateModel'
+  'boilerplates/boilerplateModel'
 ], function(core, BoilerplateModel){
   
   mv.collections.BoilerplateCollection = Backbone.Collection.extend({
