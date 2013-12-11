@@ -2,7 +2,7 @@ define([
   'core',
   'models/link',
   'collections/links',
-  'text!templates/tplHome.html'
+  'text!html/tplHome.html'
 ], function(core, Link, Links, template){
 
   mv.views.HomeView = Backbone.View.extend({

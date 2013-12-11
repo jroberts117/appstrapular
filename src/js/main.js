@@ -1,6 +1,6 @@
 require.config({
 	paths: {
-		templates: '../templates',
+		html: '../html',
 		lib: '../lib',
 		jquery: '../lib/jquery/jquery-2.0.3',
 		underscore: '../lib/underscore/underscore-1.5.2',
