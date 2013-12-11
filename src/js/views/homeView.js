@@ -1,57 +1,59 @@
 define([
-  'core',
-  'models/link',
-  'collections/links',
-  'text!html/tplHome.html'
-], function(core, Link, Links, template){
+	'core',
+	'models/link',
+	'collections/links',
+	'text!html/tplHome.html'
+], function (core, Link, Links, template) {
 
-  mv.views.HomeView = Backbone.View.extend({
-  
-    el: '',
+	mv.views.HomeView = Backbone.View.extend({
 
-    template: _.template(template),
-  
-    initialize: function(){},
+		el: '',
 
-    /**
-     * A method to generate some links
-     * @return {object} a Link collection
-     */
-    generateLinks: function(){
-      var link1 = new Link({
-        url: 'http://www.google.com',
-        display: 'Google',
-        target: '_new'
-      });
+		template: _.template(template),
 
-      var link2 = new Link({
-        url: 'http://www.github.com',
-        display: 'github',
-        target: '_new'
-      });
+		initialize: function () {},
 
-      var linksCol = new Links();
-      linksCol.add(link1);
-      linksCol.add(link2);
+		/**
+		 * A method to generate some links
+		 * @return {object} a Link collection
+		 */
+		generateLinks: function () {
+			var link1 = new Link({
+				url: 'http://www.google.com',
+				display: 'Google',
+				target: '_new'
+			});
 
-      return linksCol;
-    },
-    
-    render: function() {
-      var collection = this.generateLinks();
-    	this.$el.html(this.template({links: collection.toJSON()}));
-    },
-    
-    events: {
-      'click .example-links': 'processClick'
-    },
+			var link2 = new Link({
+				url: 'http://www.github.com',
+				display: 'github',
+				target: '_new'
+			});
 
-    processClick: function(event){
-      event.preventDefault();
-      alert('you clicked a link');
-    }
-  
-  });
-  
-  return mv.views.HomeView;
+			var linksCol = new Links();
+			linksCol.add(link1);
+			linksCol.add(link2);
+
+			return linksCol;
+		},
+
+		render: function () {
+			var collection = this.generateLinks();
+			this.$el.html(this.template({
+				links: collection.toJSON()
+			}));
+		},
+
+		events: {
+			'click .example-links': 'processClick'
+		},
+
+		processClick: function (event) {
+			event.preventDefault();
+			alert('you clicked a link');
+		}
+
+	});
+
+	return mv.views.HomeView;
 });

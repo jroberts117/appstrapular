@@ -22,7 +22,7 @@
     //relaxers
     "multistr" : true,
     "shadow" : true,
-    "sub" : true
+    "sub" : true,
 
     //environmentals
     "jquery" : true,

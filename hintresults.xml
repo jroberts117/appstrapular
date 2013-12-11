@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jslint>
+	<file name="src/js/boilerplates/boilerplateCollection.js">
+		<issue line="0" char="0" reason="Bad option: &apos;quotemark&apos;." evidence="" severity="E" />
+		<issue line="2" char="3" reason="Expected &apos;core&apos; to have an indentation at 5 instead at 3." evidence="  &apos;core&apos;," severity="W" />
+		<issue line="3" char="3" reason="Expected &apos;boilerplates/boilerplateModel&apos; to have an indentation at 5 instead at 3." evidence="  &apos;boilerplates/boilerplateModel&apos;" severity="W" />
+		<issue line="6" char="3" reason="Expected &apos;mv&apos; to have an indentation at 5 instead at 3." evidence="  mv.collections.BoilerplateCollection = Backbone.Collection.extend({" severity="W" />
+		<issue line="8" char="5" reason="Expected &apos;initialize&apos; to have an indentation at 9 instead at 5." evidence="    initialize: function(){}," severity="W" />
+		<issue line="10" char="5" reason="Expected &apos;model&apos; to have an indentation at 9 instead at 5." evidence="    model: BoilerplateModel" severity="W" />
+		<issue line="12" char="3" reason="Expected &apos;}&apos; to have an indentation at 5 instead at 3." evidence="  });" severity="W" />
+		<issue line="14" char="3" reason="Expected &apos;return&apos; to have an indentation at 5 instead at 3." evidence="  return mv.collections.BoilerplateCollection;" severity="W" />
+		<issue line="6" char="3" reason="&apos;mv&apos; is not defined." evidence="  mv.collections.BoilerplateCollection = Backbone.Collection.extend({" severity="W" />
+		<issue line="14" char="10" reason="&apos;mv&apos; is not defined." evidence="  return mv.collections.BoilerplateCollection;" severity="W" />
+	</file>
+	<file name="src/js/boilerplates/boilerplateModel.js">
+		<issue line="0" char="0" reason="Bad option: &apos;quotemark&apos;." evidence="" severity="E" />
+		<issue line="2" char="3" reason="Expected &apos;core&apos; to have an indentation at 5 instead at 3." evidence="  &apos;core&apos;" severity="W" />
+		<issue line="7" char="7" reason="Expected &apos;defaults&apos; to have an indentation at 9 instead at 7." evidence="      defaults: {}," severity="W" />
+		<issue line="9" char="7" reason="Expected &apos;initialize&apos; to have an indentation at 9 instead at 7." evidence="      initialize: function(){}" severity="W" />
+		<issue line="5" char="5" reason="&apos;mv&apos; is not defined." evidence="    mv.models.BoilerplateModel = Backbone.Model.extend({" severity="W" />
+		<issue line="13" char="12" reason="&apos;mv&apos; is not defined." evidence="    return mv.models.BoilerplateModel;" severity="W" />
+		<issue line="3" char="17" reason="&apos;core&apos; is defined but never used." evidence="], function(core) {" severity="W" />
+	</file>
+	<file name="src/js/boilerplates/boilerplateView.js">
+		<issue line="0" char="0" reason="Bad option: &apos;quotemark&apos;." evidence="" severity="E" />
+		<issue line="2" char="3" reason="Expected &apos;core&apos; to have an indentation at 5 instead at 3." evidence="  &apos;core&apos;" severity="W" />
+		<issue line="5" char="3" reason="Expected &apos;mv&apos; to have an indentation at 5 instead at 3." evidence="  mv.views.BoilerplateView = Backbone.View.extend({" severity="W" />
+		<issue line="7" char="5" reason="Expected &apos;el&apos; to have an indentation at 9 instead at 5." evidence="    el: &apos;&apos;," severity="W" />
+		<issue line="9" char="5" reason="Expected &apos;initialize&apos; to have an indentation at 9 instead at 5." evidence="    initialize: function(){}," severity="W" />
+		<issue line="11" char="5" reason="Expected &apos;render&apos; to have an indentation at 9 instead at 5." evidence="    render: function() {}," severity="W" />
+		<issue line="13" char="5" reason="Expected &apos;events&apos; to have an indentation at 9 instead at 5." evidence="    events: {}" severity="W" />
+		<issue line="15" char="3" reason="Expected &apos;}&apos; to have an indentation at 5 instead at 3." evidence="  });" severity="W" />
+		<issue line="17" char="3" reason="Expected &apos;return&apos; to have an indentation at 5 instead at 3." evidence="  return mv.views.BoilerplateView;" severity="W" />
+		<issue line="5" char="3" reason="&apos;mv&apos; is not defined." evidence="  mv.views.BoilerplateView = Backbone.View.extend({" severity="W" />
+		<issue line="17" char="10" reason="&apos;mv&apos; is not defined." evidence="  return mv.views.BoilerplateView;" severity="W" />
+		<issue line="3" char="17" reason="&apos;core&apos; is defined but never used." evidence="], function(core){" severity="W" />
+	</file>
+	<file name="src/js/collections/links.js">
+		<issue line="0" char="0" reason="Bad option: &apos;quotemark&apos;." evidence="" severity="E" />
+		<issue line="2" char="3" reason="Expected &apos;core&apos; to have an indentation at 5 instead at 3." evidence="  &apos;core&apos;," severity="W" />
+		<issue line="3" char="3" reason="Expected &apos;models/link&apos; to have an indentation at 5 instead at 3." evidence="  &apos;models/link&apos;" severity="W" />
+		<issue line="6" char="3" reason="Expected &apos;mv&apos; to have an indentation at 5 instead at 3." evidence="  mv.collections.Links = Backbone.Collection.extend({" severity="W" />
+		<issue line="8" char="5" reason="Expected &apos;initialize&apos; to have an indentation at 9 instead at 5." evidence="    initialize: function(){}," severity="W" />
+		<issue line="10" char="5" reason="Expected &apos;model&apos; to have an indentation at 9 instead at 5." evidence="    model: Link" severity="W" />
+		<issue line="12" char="3" reason="Expected &apos;}&apos; to have an indentation at 5 instead at 3." evidence="  });" severity="W" />
+		<issue line="14" char="3" reason="Expected &apos;return&apos; to have an indentation at 5 instead at 3." evidence="  return mv.collections.Links;" severity="W" />
+		<issue line="6" char="3" reason="&apos;mv&apos; is not defined." evidence="  mv.collections.Links = Backbone.Collection.extend({" severity="W" />
+		<issue line="14" char="10" reason="&apos;mv&apos; is not defined." evidence="  return mv.collections.Links;" severity="W" />
+	</file>
+	<file name="src/js/core.js">
+		<issue line="0" char="0" reason="Bad option: &apos;quotemark&apos;." evidence="" severity="E" />
+		<issue line="6" char="12" reason="This function has too many parameters. (4)" evidence="], function($, _, Backbone, Marionette) {" severity="W" />
+		<issue line="6" char="39" reason="&apos;Marionette&apos; is defined but never used." evidence="], function($, _, Backbone, Marionette) {" severity="W" />
+	</file>
+	<file name="src/js/main.js">
+		<issue line="0" char="0" reason="Bad option: &apos;quotemark&apos;." evidence="" severity="E" />
+		<issue line="50" char="35" reason="This function has too many parameters. (4)" evidence="	$(document).ajaxError(function(event, jqxhr, settings, exception) {" severity="W" />
+		<issue line="32" char="1" reason="&apos;window&apos; is not defined." evidence="window.mv = { //instanciate namespace for application" severity="W" />
+		<issue line="50" char="7" reason="&apos;document&apos; is not defined." evidence="	$(document).ajaxError(function(event, jqxhr, settings, exception) {" severity="W" />
+		<issue line="51" char="9" reason="&apos;console&apos; is not defined." evidence="		console.log(event, jqxhr, settings, exception);" severity="W" />
+		<issue line="54" char="5" reason="&apos;mv&apos; is not defined." evidence="	mv.i.router = new Router();" severity="W" />
+	</file>
+	<file name="src/js/models/link.js">
+		<issue line="0" char="0" reason="Bad option: &apos;quotemark&apos;." evidence="" severity="E" />
+		<issue line="2" char="3" reason="Expected &apos;core&apos; to have an indentation at 5 instead at 3." evidence="  &apos;core&apos;" severity="W" />
+		<issue line="8" char="7" reason="Expected &apos;defaults&apos; to have an indentation at 9 instead at 7." evidence="      defaults: {" severity="W" />
+		<issue line="9" char="6" reason="Mixed spaces and tabs." evidence="      	url: &apos;&apos;," severity="W" />
+		<issue line="9" char="11" reason="Expected &apos;url&apos; to have an indentation at 13 instead at 11." evidence="      	url: &apos;&apos;," severity="W" />
+		<issue line="10" char="6" reason="Mixed spaces and tabs." evidence="      	display: &apos;&apos;," severity="W" />
+		<issue line="10" char="11" reason="Expected &apos;display&apos; to have an indentation at 13 instead at 11." evidence="      	display: &apos;&apos;," severity="W" />
+		<issue line="11" char="6" reason="Mixed spaces and tabs." evidence="      	target: &apos;&apos;" severity="W" />
+		<issue line="11" char="11" reason="Expected &apos;target&apos; to have an indentation at 13 instead at 11." evidence="      	target: &apos;&apos;" severity="W" />
+		<issue line="12" char="7" reason="Expected &apos;}&apos; to have an indentation at 9 instead at 7." evidence="      }," severity="W" />
+		<issue line="14" char="7" reason="Expected &apos;initialize&apos; to have an indentation at 9 instead at 7." evidence="      initialize: function(){}" severity="W" />
+		<issue line="5" char="5" reason="&apos;mv&apos; is not defined." evidence="    mv.models.Link = Backbone.Model.extend({" severity="W" />
+		<issue line="18" char="12" reason="&apos;mv&apos; is not defined." evidence="    return mv.models.Link;" severity="W" />
+		<issue line="3" char="17" reason="&apos;core&apos; is defined but never used." evidence="], function(core) {" severity="W" />
+	</file>
+	<file name="src/js/router.js">
+		<issue line="0" char="0" reason="Bad option: &apos;quotemark&apos;." evidence="" severity="E" />
+		<issue line="15" char="28" reason="&apos;mv&apos; is not defined." evidence="				var view = mv.i.views.homeView = new HomeView({el: mv.sections.mainContainer});" severity="W" />
+		<issue line="15" char="68" reason="&apos;mv&apos; is not defined." evidence="				var view = mv.i.views.homeView = new HomeView({el: mv.sections.mainContainer});" severity="W" />
+		<issue line="4" char="13" reason="&apos;view&apos; is defined but never used." evidence="	var view = null;" severity="W" />
+		<issue line="3" char="22" reason="&apos;App&apos; is defined but never used." evidence="], function(core, App) {" severity="W" />
+		<issue line="3" char="17" reason="&apos;core&apos; is defined but never used." evidence="], function(core, App) {" severity="W" />
+	</file>
+	<file name="src/js/views/homeView.js">
+		<issue line="0" char="0" reason="Bad option: &apos;quotemark&apos;." evidence="" severity="E" />
+		<issue line="2" char="3" reason="Expected &apos;core&apos; to have an indentation at 5 instead at 3." evidence="  &apos;core&apos;," severity="W" />
+		<issue line="3" char="3" reason="Expected &apos;models/link&apos; to have an indentation at 5 instead at 3." evidence="  &apos;models/link&apos;," severity="W" />
+		<issue line="4" char="3" reason="Expected &apos;collections/links&apos; to have an indentation at 5 instead at 3." evidence="  &apos;collections/links&apos;," severity="W" />
+		<issue line="5" char="3" reason="Expected &apos;text!html/tplHome.html&apos; to have an indentation at 5 instead at 3." evidence="  &apos;text!html/tplHome.html&apos;" severity="W" />
+		<issue line="6" char="12" reason="This function has too many parameters. (4)" evidence="], function(core, Link, Links, template){" severity="W" />
+		<issue line="8" char="3" reason="Expected &apos;mv&apos; to have an indentation at 5 instead at 3." evidence="  mv.views.HomeView = Backbone.View.extend({" severity="W" />
+		<issue line="10" char="5" reason="Expected &apos;el&apos; to have an indentation at 9 instead at 5." evidence="    el: &apos;&apos;," severity="W" />
+		<issue line="12" char="5" reason="Expected &apos;template&apos; to have an indentation at 9 instead at 5." evidence="    template: _.template(template)," severity="W" />
+		<issue line="14" char="5" reason="Expected &apos;initialize&apos; to have an indentation at 9 instead at 5." evidence="    initialize: function(){}," severity="W" />
+		<issue line="20" char="5" reason="Expected &apos;generateLinks&apos; to have an indentation at 9 instead at 5." evidence="    generateLinks: function(){" severity="W" />
+		<issue line="21" char="7" reason="Expected &apos;var&apos; to have an indentation at 13 instead at 7." evidence="      var link1 = new Link({" severity="W" />
+		<issue line="22" char="9" reason="Expected &apos;url&apos; to have an indentation at 17 instead at 9." evidence="        url: &apos;http://www.google.com&apos;," severity="W" />
+		<issue line="23" char="9" reason="Expected &apos;display&apos; to have an indentation at 17 instead at 9." evidence="        display: &apos;Google&apos;," severity="W" />
+		<issue line="24" char="9" reason="Expected &apos;target&apos; to have an indentation at 17 instead at 9." evidence="        target: &apos;_new&apos;" severity="W" />
+		<issue line="25" char="7" reason="Expected &apos;}&apos; to have an indentation at 13 instead at 7." evidence="      });" severity="W" />
+		<issue line="27" char="7" reason="Expected &apos;var&apos; to have an indentation at 13 instead at 7." evidence="      var link2 = new Link({" severity="W" />
+		<issue line="27" char="11" reason="Too many var statements." evidence="      var link2 = new Link({" severity="W" />
+		<issue line="28" char="9" reason="Expected &apos;url&apos; to have an indentation at 17 instead at 9." evidence="        url: &apos;http://www.github.com&apos;," severity="W" />
+		<issue line="29" char="9" reason="Expected &apos;display&apos; to have an indentation at 17 instead at 9." evidence="        display: &apos;github&apos;," severity="W" />
+		<issue line="30" char="9" reason="Expected &apos;target&apos; to have an indentation at 17 instead at 9." evidence="        target: &apos;_new&apos;" severity="W" />
+		<issue line="31" char="7" reason="Expected &apos;}&apos; to have an indentation at 13 instead at 7." evidence="      });" severity="W" />
+		<issue line="33" char="7" reason="Expected &apos;var&apos; to have an indentation at 13 instead at 7." evidence="      var linksCol = new Links();" severity="W" />
+		<issue line="33" char="11" reason="Too many var statements." evidence="      var linksCol = new Links();" severity="W" />
+		<issue line="34" char="7" reason="Expected &apos;linksCol&apos; to have an indentation at 13 instead at 7." evidence="      linksCol.add(link1);" severity="W" />
+		<issue line="35" char="7" reason="Expected &apos;linksCol&apos; to have an indentation at 13 instead at 7." evidence="      linksCol.add(link2);" severity="W" />
+		<issue line="37" char="7" reason="Expected &apos;return&apos; to have an indentation at 13 instead at 7." evidence="      return linksCol;" severity="W" />
+		<issue line="38" char="5" reason="Expected &apos;}&apos; to have an indentation at 9 instead at 5." evidence="    }," severity="W" />
+		<issue line="40" char="5" reason="Expected &apos;render&apos; to have an indentation at 9 instead at 5." evidence="    render: function() {" severity="W" />
+		<issue line="41" char="7" reason="Expected &apos;var&apos; to have an indentation at 13 instead at 7." evidence="      var collection = this.generateLinks();" severity="W" />
+		<issue line="42" char="4" reason="Mixed spaces and tabs." evidence="    	this.$el.html(this.template({links: collection.toJSON()}));" severity="W" />
+		<issue line="42" char="9" reason="Expected &apos;this&apos; to have an indentation at 13 instead at 9." evidence="    	this.$el.html(this.template({links: collection.toJSON()}));" severity="W" />
+		<issue line="43" char="5" reason="Expected &apos;}&apos; to have an indentation at 9 instead at 5." evidence="    }," severity="W" />
+		<issue line="45" char="5" reason="Expected &apos;events&apos; to have an indentation at 9 instead at 5." evidence="    events: {" severity="W" />
+		<issue line="46" char="7" reason="Expected &apos;click .example-links&apos; to have an indentation at 13 instead at 7." evidence="      &apos;click .example-links&apos;: &apos;processClick&apos;" severity="W" />
+		<issue line="47" char="5" reason="Expected &apos;}&apos; to have an indentation at 9 instead at 5." evidence="    }," severity="W" />
+		<issue line="49" char="5" reason="Expected &apos;processClick&apos; to have an indentation at 9 instead at 5." evidence="    processClick: function(event){" severity="W" />
+		<issue line="50" char="7" reason="Expected &apos;event&apos; to have an indentation at 13 instead at 7." evidence="      event.preventDefault();" severity="W" />
+		<issue line="51" char="7" reason="Expected &apos;alert&apos; to have an indentation at 13 instead at 7." evidence="      alert(&apos;you clicked a link&apos;);" severity="W" />
+		<issue line="52" char="5" reason="Expected &apos;}&apos; to have an indentation at 9 instead at 5." evidence="    }" severity="W" />
+		<issue line="54" char="3" reason="Expected &apos;}&apos; to have an indentation at 5 instead at 3." evidence="  });" severity="W" />
+		<issue line="56" char="3" reason="Expected &apos;return&apos; to have an indentation at 5 instead at 3." evidence="  return mv.views.HomeView;" severity="W" />
+		<issue line="8" char="3" reason="&apos;mv&apos; is not defined." evidence="  mv.views.HomeView = Backbone.View.extend({" severity="W" />
+		<issue line="51" char="7" reason="&apos;alert&apos; is not defined." evidence="      alert(&apos;you clicked a link&apos;);" severity="W" />
+		<issue line="56" char="10" reason="&apos;mv&apos; is not defined." evidence="  return mv.views.HomeView;" severity="W" />
+	</file>
+</jslint>

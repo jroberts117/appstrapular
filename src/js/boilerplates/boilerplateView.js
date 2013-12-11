@@ -1,18 +1,18 @@
 define([
-  'core'
-], function(core){
+	'core'
+], function (core) {
 
-  mv.views.BoilerplateView = Backbone.View.extend({
-  
-    el: '',
-  
-    initialize: function(){},
-    
-    render: function() {},
-    
-    events: {}
-  
-  });
-  
-  return mv.views.BoilerplateView;
+	mv.views.BoilerplateView = Backbone.View.extend({
+
+		el: '',
+
+		initialize: function () {},
+
+		render: function () {},
+
+		events: {}
+
+	});
+
+	return mv.views.BoilerplateView;
 });

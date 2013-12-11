@@ -25,7 +25,6 @@ require.config({
 	}
 });
 
-
 // Define jQuery as AMD module
 define.amd.jQuery = true;
 // Setup namespacing
@@ -45,9 +44,9 @@ window.mv = { //instanciate namespace for application
 require([
 	'core',
 	'router',
-], function(core, Router) {
+], function (core, Router) {
 	//listen for any ajax errors in the site
-	$(document).ajaxError(function(event, jqxhr, settings, exception) {
+	$(document).ajaxError(function (event, jqxhr, settings, exception) {
 		console.log(event, jqxhr, settings, exception);
 	});
 
