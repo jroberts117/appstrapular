@@ -16,8 +16,9 @@ Key technologies
 
 Things to figure out
 	*pre-compilation of templates
-	*code quality checks (.jshintrc)
-	*code beautification process?
+	*code quality checks
+	*code beautification process
 	*code documentation process
 	*unit testing
 	*performance engineering
+	*bi-directional data binding
