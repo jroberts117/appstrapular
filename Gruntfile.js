@@ -85,11 +85,9 @@ module.exports = function (grunt) {
 						debugExclude: true
 					},
 
-					modules: [
-						{
-							name: 'core'
-						}
-					],
+					modules: [{
+						name: 'core'
+					}],
 
 					optimize: 'uglify2', // Use 'none' If you do not want to uglify.
 					uglify2: {
@@ -165,9 +163,14 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-karma');
 
 	// Default task.
-	grunt.registerTask('default', 'copy files', function () {
+	grunt.registerTask('default', 'show options', function () {
 		grunt.log.writeln('\nThese are your options:\n');
+		grunt.log.writeln('pre-commit  <------- ensures code quality before checking in\n');
 		grunt.log.writeln('optimize  <------- minifies css/js\n');
+	});
+
+	grunt.registerTask('pre-commit', 'run before committing code', function () {
+		grunt.task.run(['jsbeautifier:modify', 'hint']);
 	});
 
 	grunt.registerTask('optimize', 'Static file optimization process', function () {
