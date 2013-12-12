@@ -18,19 +18,21 @@ define([
 		 * @return {object} a Link collection
 		 */
 		generateLinks: function () {
-			var link1 = new Link({
+			var link1, link2, linksCol;
+
+			link1 = new Link({
 				url: 'http://www.google.com',
 				display: 'Google',
 				target: '_new'
 			});
 
-			var link2 = new Link({
+			link2 = new Link({
 				url: 'http://www.github.com',
 				display: 'github',
 				target: '_new'
 			});
 
-			var linksCol = new Links();
+			linksCol = new Links();
 			linksCol.add(link1);
 			linksCol.add(link2);
 

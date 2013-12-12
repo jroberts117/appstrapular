@@ -1,7 +1,7 @@
 define([
 	'core'
 ], function (core, App) {
-	var view = null;
+	var view = null; //attempting to minimize objects in memory by reusing this var for views
 	return Backbone.Router.extend({
 		initialize: function () {},
 
@@ -12,7 +12,7 @@ define([
 
 		indexView: function () {
 			require(['views/homeView'], function (HomeView) {
-				var view = mv.i.views.homeView = new HomeView({
+				view = mv.i.views.homeView = new HomeView({
 					el: mv.sections.mainContainer
 				});
 				$.when(view.setup())

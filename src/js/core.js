@@ -3,7 +3,7 @@ define([
 	'underscore',
 	'backbone',
 	'bootstrap'
-], function ($, _, Backbone, Marionette) {
+], function ($, _, Backbone) {
 	_.templateSettings = {
 		evaluate: /{{([\s\S]+?)}}/g,
 		interpolate: /{{=([\s\S]+?)}}/g

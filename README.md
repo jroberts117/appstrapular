@@ -20,3 +20,4 @@ Things to figure out
 	*code beautification process?
 	*code documentation process
 	*unit testing
+	*performance engineering

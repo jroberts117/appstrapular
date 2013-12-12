@@ -178,7 +178,8 @@ module.exports = function (grunt) {
 		grunt.task.run(['cssmin', 'requirejs', 'uglify']);
 	});
 
-	grunt.registerTask('format', ['jsbeautifier']);
+	grunt.registerTask('format', ['jsbeautifier:modify']);
 	grunt.registerTask('hint', ['jshint']);
+	grunt.registerTask('clense', ['jsbeautifier:modify', 'hint']);
 	grunt.registerTask('karmatest', ['karma']);
 };
