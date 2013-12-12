@@ -68,7 +68,7 @@ module.exports = function (grunt) {
 				options: {
 					appDir: '<%= SRC_PATH %>',
 					baseUrl: 'js', // Path of source scripts, relative to this build file
-					mainConfigFile: '<%= SRC_PATH %>' + 'buildConfig.js', // Path of shared configuration file, relative to this build file
+					mainConfigFile: '<%= SRC_PATH %>' + 'js/main.js', // Path of shared configuration file, relative to this build file
 					dir: '<%= BUILD_PATH %>',
 					// name: 'main',                                                   // Name of input script (.js extension inferred)
 					// name: '../apps/mv/mv', // Name of input script (.js extension inferred)
@@ -80,12 +80,16 @@ module.exports = function (grunt) {
 					findNestedDependencies: true,
 					// generateSourceMaps: true,
 					inlineText: true,
-					// stubModules: ['cache'],
+					// stubModules: [],
 					pragmas: {
 						debugExclude: true
 					},
 
-					modules: [],
+					modules: [
+						{
+							name: 'core'
+						}
+					],
 
 					optimize: 'uglify2', // Use 'none' If you do not want to uglify.
 					uglify2: {
