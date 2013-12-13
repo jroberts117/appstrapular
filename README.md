@@ -45,3 +45,6 @@ A quick start for a JS application, which includes testing &amp; building operat
 
 	`grunt optimize'
 		This will create modules, minify and compress files, and place them into the "target" directory
+
+	`grunt document`
+		This will generate documentation for the src code.  After this command has been ran, you can navigate to webapp/doc/src/index.html.html to see it

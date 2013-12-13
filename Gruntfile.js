@@ -144,11 +144,27 @@ module.exports = function (grunt) {
 				configFile: './test/karma.config.js',
 				autoWatch: true
 			}
-		}
+		},
 
-		// copyProdFiles: function() {
-		// 	grunt.log.write('hello, world');
-		// }
+	  docker: {
+	    app: {
+	      expand: true,
+	      src: ['<%= SRC_PATH %>' + '**/*.js', '<%= SRC_PATH %>' + '**/*.css', '<%= SRC_PATH %>' + '**/*.html'],
+	      dest: 'doc',
+	      options: {
+	        onlyUpdated: false,
+	        colourScheme: 'default',
+	        ignoreHidden: false,
+	        sidebarState: true,
+	        exclude: '<%= SRC_PATH %>' + 'lib/**/*',
+	        lineNums: true,
+	        js: [],
+	        css: [],
+	        extras: ['fileSearch', 'goToLine']
+	      }
+	    }
+	  }
+
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-cssmin'); //css minification plugin
@@ -161,6 +177,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-jsbeautifier'); //formatting code
 	grunt.loadNpmTasks('grunt-contrib-jshint'); //for hinting code quality
 	grunt.loadNpmTasks('grunt-karma');
+	grunt.loadNpmTasks('grunt-docker');
 
 	// Default task.
 	grunt.registerTask('default', 'show options', function () {
@@ -189,4 +206,5 @@ module.exports = function (grunt) {
 	grunt.registerTask('hint', ['jshint']);
 	grunt.registerTask('clense', ['jsbeautifier:modify', 'hint']);
 	grunt.registerTask('karmatest', ['karma']);
+	grunt.registerTask('document', ['docker']);
 };

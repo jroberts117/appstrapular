@@ -23,6 +23,7 @@
     "karma-junit-reporter": "0.1.0",
     "karma-ie-launcher": "~0.1",
     "grunt-karma": "~0.6.2",
-    "grunt-jsbeautifier": "~0.2.4"
+    "grunt-jsbeautifier": "~0.2.4",
+    "grunt-docker": "~0.0.5"
   }
 }
