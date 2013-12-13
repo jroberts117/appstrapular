@@ -70,10 +70,6 @@ module.exports = function (grunt) {
 					baseUrl: 'js', // Path of source scripts, relative to this build file
 					mainConfigFile: '<%= SRC_PATH %>' + 'js/main.js', // Path of shared configuration file, relative to this build file
 					dir: '<%= BUILD_PATH %>',
-					// name: 'main',                                                   // Name of input script (.js extension inferred)
-					// name: '../apps/mv/mv', // Name of input script (.js extension inferred)
-					// out: '<%= BUILD_PATH %>' + 'js/main.min.js', // Path of built script output
-					//fileExclusionRegExp: /router/, // Ignore all files matching this pattern
 					keepBuildDir: true,
 					useStrict: true,
 					preserveLicenseComments: false,
@@ -87,6 +83,9 @@ module.exports = function (grunt) {
 
 					modules: [{
 						name: 'core'
+					},{
+						name: 'router',
+						exclude: ['core']
 					}],
 
 					optimize: 'uglify2', // Use 'none' If you do not want to uglify.
@@ -134,8 +133,6 @@ module.exports = function (grunt) {
 				ignores: [
 					'<%= SRC_PATH %>' + 'lib/**/*.js'
 				]
-				// '-W099': true, //ignore mixed tabs and spaces error
-				// '-W041': true //ignore !== and === errors
 			}
 		},
 
@@ -146,24 +143,24 @@ module.exports = function (grunt) {
 			}
 		},
 
-	  docker: {
-	    app: {
-	      expand: true,
-	      src: ['<%= SRC_PATH %>' + '**/*.js', '<%= SRC_PATH %>' + '**/*.css', '<%= SRC_PATH %>' + '**/*.html'],
-	      dest: 'doc',
-	      options: {
-	        onlyUpdated: false,
-	        colourScheme: 'default',
-	        ignoreHidden: false,
-	        sidebarState: true,
-	        exclude: '<%= SRC_PATH %>' + 'lib/**/*',
-	        lineNums: true,
-	        js: [],
-	        css: [],
-	        extras: ['fileSearch', 'goToLine']
-	      }
-	    }
-	  }
+		docker: {
+			app: {
+				expand: true,
+				src: ['<%= SRC_PATH %>' + '**/*.js', '<%= SRC_PATH %>' + '**/*.css', '<%= SRC_PATH %>' + '**/*.html'],
+				dest: 'doc',
+				options: {
+					onlyUpdated: false,
+					colourScheme: 'default',
+					ignoreHidden: false,
+					sidebarState: true,
+					exclude: '<%= SRC_PATH %>' + 'lib/**/*',
+					lineNums: true,
+					js: [],
+					css: [],
+					extras: ['fileSearch', 'goToLine']
+				}
+			}
+		}
 
 	});
 
@@ -176,35 +173,37 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat'); //create bundles
 	grunt.loadNpmTasks('grunt-jsbeautifier'); //formatting code
 	grunt.loadNpmTasks('grunt-contrib-jshint'); //for hinting code quality
-	grunt.loadNpmTasks('grunt-karma');
-	grunt.loadNpmTasks('grunt-docker');
+	grunt.loadNpmTasks('grunt-karma'); //cross-browser execution of unit tests
+	grunt.loadNpmTasks('grunt-docker'); //automated process to document src code
 
 	// Default task.
 	grunt.registerTask('default', 'show options', function () {
 		grunt.log.writeln('\nThese are your options:\n');
-		grunt.log.writeln('pre-commit  <------- ensures code quality before checking in\n');
-		grunt.log.writeln('optimize  <------- minifies css/js\n');
+		grunt.log.writeln('validate  <------- ensures code quality before checking in by code formatting, JSHint, and unit tests\n');
+		grunt.log.writeln('document  <------- document the source code\n');
+		grunt.log.writeln('optimize  <------- bundles and minifies applicable static files for optimal page performance\n');
 	});
 
-	grunt.registerTask('pre-commit', 'run before committing code', function () {
-		grunt.task.run(['jsbeautifier:modify', 'hint']);
+	grunt.registerTask('validate', function () {
+		grunt.task.run(['jsbeautifier:modify', 'hint', 'karma']);
 	});
 
-	grunt.registerTask('optimize', 'Static file optimization process', function () {
-		grunt.log.writeln('cleaning build target ***TASK***');
+	grunt.registerTask('document', function () {
+		grunt.task.run(['docker']);
+	});
+
+	grunt.registerTask('optimize', function () {
+		grunt.log.writeln('cleaning build target');
 		grunt.task.run(['clean:target']);
 
-		grunt.log.writeln('copying files to build target ***TASK***');
-		// grunt.task.run(['copy:ecoFiles']);
+		grunt.log.writeln('copying files to build target');
 		grunt.task.run(['copy:target']);
 
-		grunt.log.writeln('optimizing files ***TASK***');
+		grunt.log.writeln('optimizing files');
 		grunt.task.run(['cssmin', 'requirejs', 'uglify']);
 	});
 
 	grunt.registerTask('format', ['jsbeautifier:modify']);
 	grunt.registerTask('hint', ['jshint']);
-	grunt.registerTask('clense', ['jsbeautifier:modify', 'hint']);
 	grunt.registerTask('karmatest', ['karma']);
-	grunt.registerTask('document', ['docker']);
 };

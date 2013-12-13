@@ -34,7 +34,7 @@ A quick start for a JS application, which includes testing &amp; building operat
 	`grunt`
 		This will show you the options available
 
-	`grunt pre-commit`
+	`grunt validate`
 		This will execute the following
 			* Format applicable source files (within src folder) that don't match the formatting standards.  This will not affect external libs
 			* Run JSHint against the src files.  Results are outputted to hintresults.xml
@@ -43,8 +43,8 @@ A quick start for a JS application, which includes testing &amp; building operat
 				- Auto documentation from JSDoc
 			If anything fails in this build task, it is meant to break/stop.  These items must be resolved! 
 
-	`grunt optimize'
-		This will create modules, minify and compress files, and place them into the "target" directory
-
 	`grunt document`
-		This will generate documentation for the src code.  After this command has been ran, you can navigate to webapp/doc/src/index.html.html to see it
+		This will generate documentation for the src code.  After this command has been ran, you can point your browser to webapp/doc/src/index.html.html to see it
+	
+	`grunt optimize'
+		This will create modules, minify and compress files, and place them into the "target" directory.  You can use the contents of this folder to your webserver for environments where you want better page performance (aka QA/Prod servers)

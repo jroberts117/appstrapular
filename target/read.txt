@@ -1,1 +1,0 @@
-This is the directory where the optimized files get placed, for a more performant application
