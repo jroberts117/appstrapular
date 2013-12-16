@@ -1,9 +1,4 @@
-// var os = require('os');
-
 module.exports = function (grunt) {
-	// console.log(os.arch());
-	// var isWin = !!process.platform.match(/^win/);
-	// console.log(isWin);
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
