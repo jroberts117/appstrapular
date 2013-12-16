@@ -18,7 +18,7 @@ require.config({
     paths: {
         html: '../html',
         lib: '../lib',
-        jquery: '../lib/jquery/jquery-2.0.3',
+        jquery: '../lib/jquery/jquery-1.10.2',
         underscore: '../lib/underscore/underscore-1.5.2',
         backbone: '../lib/backbone/backbone-1.1.0',
         text: '../lib/require/text',
