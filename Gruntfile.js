@@ -5,7 +5,6 @@ module.exports = function (grunt) {
 
 		SRC_PATH: './src/',
 		BUILD_PATH: './target/',
-		IS_WINDOWS_OS: !! process.platform.match(/^win/),
 
 		/**
 		 * Used to remove files or directories
@@ -151,9 +150,9 @@ module.exports = function (grunt) {
 				// browsers: [
 				//     'Chrome',
 				//     'Firefox'
-				//     // 'IE'
-				//     // 'Safari'
-				//     // 'PhantomJS'
+				//      'IE'
+				//      'Safari'
+				//      'PhantomJS'
 				// 	]
 
 			},
@@ -215,7 +214,6 @@ module.exports = function (grunt) {
 		grunt.log.writeln('validate  <------- ensures code quality before checking in by code formatting, JSHint, and unit tests\n');
 		grunt.log.writeln('document  <------- document the source code\n');
 		grunt.log.writeln('optimize  <------- bundles and minifies applicable static files for optimal page performance\n');
-		console.log(process.env);
 	});
 
 	grunt.registerTask('validate', function () {
