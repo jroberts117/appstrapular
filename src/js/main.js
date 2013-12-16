@@ -21,6 +21,10 @@ require.config({
 		},
 		bootstrap: {
 			deps: ['jquery']
+		},
+
+		'html/compiled': {
+			deps: ['core']
 		}
 	}
 });
@@ -44,6 +48,7 @@ window.mv = { //instanciate namespace for application
 require([
 	'core',
 	'router',
+	'html/compiled'
 ], function (core, Router) {
 	//listen for any ajax errors in the site
 	$(document).ajaxError(function (event, jqxhr, settings, exception) {

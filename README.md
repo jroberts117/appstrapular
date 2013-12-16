@@ -41,7 +41,14 @@ A quick start for a JS application, which includes testing &amp; building operat
 			* To come:
 				- Unit tests
 				- Auto documentation from JSDoc
-			If anything fails in this build task, it is meant to break/stop.  These items must be resolved! 
+			If anything fails in this build task, it is meant to break/stop.  These items must be resolved!
+
+			**If you run this from a windows machine, you will probably have to set environment variables for browser paths.  For example:
+				CHROME_BIN='C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
+				IE_BIN='C:\Program Files (x86)\Internet Explorer\iexplore.exe'
+				FIREFOX_BIN='C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
+
+				More info can be found here: [http://karma-runner.github.io/0.8/config/browsers.html]
 
 	`grunt document`
 		This will generate documentation for the src code.  After this command has been ran, you can point your browser to webapp/doc/src/index.html.html to see it

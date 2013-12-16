@@ -22,8 +22,10 @@
     "karma-coverage": "0.1.0",
     "karma-junit-reporter": "0.1.0",
     "karma-ie-launcher": "~0.1",
+    "karma-safari-launcher": "~0.1",
     "grunt-karma": "~0.6.2",
     "grunt-jsbeautifier": "~0.2.4",
-    "grunt-docker": "~0.0.5"
+    "grunt-docker": "~0.0.5",
+    "grunt-contrib-jst": "~0.5.1"
   }
 }
