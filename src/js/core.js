@@ -19,4 +19,9 @@ define([
 			this.onClose();
 		}
 	};
+
+	//listen for any ajax errors in the site
+	$(document).ajaxError(function (event, jqxhr, settings, exception) {
+		console.log(event, jqxhr, settings, exception);
+	});
 });

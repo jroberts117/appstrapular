@@ -102,6 +102,7 @@ module.exports = function (grunt) {
 			}
 		},
 
+		// Pre-compilation of templates
 		jst: {
 			compile: {
 				options: {
@@ -115,6 +116,7 @@ module.exports = function (grunt) {
 			}
 		},
 
+		// Code formatting configuration
 		jsbeautifier: {
 			modify: {
 				src: ['Gruntfile.js', '<%= SRC_PATH %>' + '**/*.js', '!<%= SRC_PATH %>' + 'lib/**/*.js'], //exclude lib directory
@@ -131,6 +133,9 @@ module.exports = function (grunt) {
 			}
 		},
 
+		/**
+		 * Code quality check configuration
+		 */
 		jshint: {
 			all: ['<%= SRC_PATH %>' + '**/*.js'],
 			options: {
@@ -144,6 +149,9 @@ module.exports = function (grunt) {
 			}
 		},
 
+		/**
+		 * Unit testing configuration
+		 */
 		karma: {
 			options: {
 				configFile: './test/karma.config.js',
@@ -174,6 +182,9 @@ module.exports = function (grunt) {
 			}
 		},
 
+		/**
+		 * Auto documentation of your source code
+		 */
 		docker: {
 			app: {
 				expand: true,
@@ -216,16 +227,19 @@ module.exports = function (grunt) {
 		grunt.log.writeln('optimize  <------- bundles and minifies applicable static files for optimal page performance\n');
 	});
 
+	// Run this task to validate your code quality, code formatting, hinting & unit tests
 	grunt.registerTask('validate', function () {
 		grunt.task.run(['jsbeautifier:modify']); //format the code
 		grunt.task.run(['hint']); //validate for coding error
 		grunt.task.run(['karmaValidate']); //run the unit tests
 	});
 
+	// Run this task to generate documentation from the JSDoc in your code
 	grunt.registerTask('document', function () {
 		grunt.task.run(['docker']);
 	});
 
+	// Run this task to optimize your code for a production or production-like environments
 	grunt.registerTask('optimize', function () {
 		grunt.task.run(['clean:target']); //delete any previous optimizations
 		grunt.task.run(['copy:target']); //copy src files to target
@@ -235,6 +249,7 @@ module.exports = function (grunt) {
 		grunt.task.run(['uglify']); //minify JS files
 	});
 
+	// Trigger a one-time validation of files, based on operating system
 	grunt.registerTask('karmaValidate', function () {
 		if (isWindows()) {
 			grunt.task.run(['karma:validateWindows']);
@@ -243,6 +258,7 @@ module.exports = function (grunt) {
 		}
 	});
 
+	// Trigger continuous unit testing, based on operating system
 	grunt.registerTask('karmaDev', function () {
 		if (isWindows()) {
 			grunt.task.run(['karma:windowsDev']);

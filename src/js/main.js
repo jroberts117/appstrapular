@@ -1,3 +1,4 @@
+// RequireJS configuration
 require.config({
 	paths: {
 		html: '../html',
@@ -31,7 +32,8 @@ require.config({
 
 // Define jQuery as AMD module
 define.amd.jQuery = true;
-// Setup namespacing
+
+// Setup global namespacing
 window.mv = { //instanciate namespace for application
 	views: {},
 	models: {},
@@ -45,15 +47,12 @@ window.mv = { //instanciate namespace for application
 	}
 };
 
+// bootstrap the application
 require([
 	'core',
 	'router',
 	'html/compiled'
 ], function (core, Router) {
-	//listen for any ajax errors in the site
-	$(document).ajaxError(function (event, jqxhr, settings, exception) {
-		console.log(event, jqxhr, settings, exception);
-	});
 
 	mv.i.router = new Router();
 	Backbone.history.start();

@@ -1,3 +1,9 @@
+/**
+ * This file is meant to be used as a template for creating models in this project.  It uses proper
+ * namespacing to allow access to intanciate from the console or the code itself (which is not recommended
+ * since we use RequireJS)
+ */
+
 define([
 	'core'
 ], function (core) {
