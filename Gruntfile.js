@@ -1,3 +1,5 @@
+var JSON5 = require('json5');
+
 module.exports = function (grunt) {
 	// Project configuration.
 	grunt.initConfig({
@@ -60,45 +62,7 @@ module.exports = function (grunt) {
 		 */
 		requirejs: {
 			compile: {
-				options: {
-					appDir: '<%= SRC_PATH %>',
-					baseUrl: 'js', // Path of source scripts, relative to this build file
-					mainConfigFile: '<%= SRC_PATH %>' + 'js/main.js', // Path of shared configuration file, relative to this build file
-					dir: '<%= BUILD_PATH %>',
-					keepBuildDir: true,
-					useStrict: true,
-					preserveLicenseComments: false,
-					findNestedDependencies: true,
-					// generateSourceMaps: true,
-					inlineText: false,
-					// stubModules: ['text'],
-					pragmas: {
-						debugExclude: true
-					},
-
-					modules: [{
-						name: 'core'
-					}, {
-						name: 'router',
-						exclude: ['core']
-					}],
-
-					optimize: 'uglify2', // Use 'none' If you do not want to uglify.
-					uglify2: {
-						output: {
-							beautify: false,
-							comments: false
-						},
-						compress: {
-							sequences: false,
-							global_defs: {
-								DEBUG: false
-							}
-						},
-						warnings: false,
-						mangle: true
-					}
-				}
+				options: JSON5.parse(grunt.file.read('require-build-config.json'))
 			}
 		},
 
@@ -107,7 +71,10 @@ module.exports = function (grunt) {
 			compile: {
 				options: {
 					templateSettings: {
-						interpolate: /{{=([\s\S]+?)}}/g
+						//these MUST match the settings in core.js
+						interpolate: /{{=([\s\S]+?)}}/g,
+						evaluate: /{{([\s\S]+?)}}/g,
+						escape: /{{-([\s\S]+?)}}/g
 					}
 				},
 				files: {
