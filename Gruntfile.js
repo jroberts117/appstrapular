@@ -71,7 +71,10 @@ module.exports = function (grunt) {
 			compile: {
 				options: {
 					templateSettings: {
-						interpolate: /{{=([\s\S]+?)}}/g
+						//these MUST match the settings in core.js
+						interpolate: /{{=([\s\S]+?)}}/g,
+						evaluate: /{{([\s\S]+?)}}/g,
+						escape: /{{-([\s\S]+?)}}/g
 					}
 				},
 				files: {
