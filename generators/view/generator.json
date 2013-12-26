@@ -1,0 +1,13 @@
+{
+  "files": [
+    {
+      "from": "view.js.hbs",
+      "to":"src/js/views/{{name}}.js"
+    },
+    {
+      "from": "template.html.hbs",
+      "to":"src/html/{{name}}.html"
+    }
+  ],
+  "dependencies": []
+}
