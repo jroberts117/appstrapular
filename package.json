@@ -26,6 +26,8 @@
     "grunt-karma": "~0.6.2",
     "grunt-jsbeautifier": "~0.2.4",
     "grunt-docker": "~0.0.5",
-    "grunt-contrib-jst": "~0.5.1"
+    "grunt-contrib-jst": "~0.5.1",
+    "handlebars":"~1.2.0",
+    "scaffolt":"~0.4.3"
   }
 }
