@@ -53,5 +53,8 @@ A quick start for a JS application, which includes testing &amp; building operat
 	`grunt document`
 		This will generate documentation for the src code.  After this command has been ran, you can point your browser to webapp/doc/src/index.html.html to see it
 	
-	`grunt optimize'
+	`grunt optimize`
 		This will create modules, minify and compress files, and place them into the "target" directory.  You can use the contents of this folder to your webserver for environments where you want better page performance (aka QA/Prod servers)
+		
+	`scaffolt basic <name>`
+		This is create a new view, model, and collection with the <name> specified, in the corresponding directories under src/js
