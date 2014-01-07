@@ -2,7 +2,8 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'bootstrap'
+	'bootstrap',
+	'backboneGlobal'
 ], function ($, _, Backbone) {
 	_.templateSettings = {
 		evaluate: /{{([\s\S]+?)}}/g,

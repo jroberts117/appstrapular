@@ -21,11 +21,13 @@ require.config({
         jquery: '../lib/jquery/jquery-1.10.2',
         underscore: '../lib/underscore/underscore-1.5.2',
         backbone: '../lib/backbone/backbone-1.1.0',
+        backboneGlobal: '../lib/backbone/backbone.global',
         text: '../lib/require/text',
         domReady: '../lib/require/domReady',
         bootstrap: '../lib/bootstrap/bootstrap-3.0.3/js/bootstrap',
         normalize: '../lib/require/normalize',
-        css: '../lib/require/css'
+        css: '../lib/require/css',
+        test: '../../test'
     },
     shim: {
         underscore: {
@@ -37,6 +39,9 @@ require.config({
         },
         bootstrap: {
             deps: ['jquery']
+        },
+        backboneGlobal: {
+            deps: ['backbone', 'underscore']
         }
     },
 
@@ -50,3 +55,17 @@ require.config({
     // start test run, once Require.js is done
     callback: window.__karma__.start,
 });
+
+// Setup global namespacing
+window.mv = { //instanciate namespace for application
+    views: {},
+    models: {},
+    collections: {},
+    i: { //for instaciated objects
+        views: {},
+        router: null
+    },
+    sections: {
+        mainContainer: '#main-container'
+    }
+};

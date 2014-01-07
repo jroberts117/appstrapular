@@ -9,14 +9,12 @@ define([
 
 		el: '',
 
-		template: _.template(template),
-
-		initialize: function() {
+		initialize: function () {
 			this.collection = new Links();
 		},
 
 		render: function () {
-			this.$el.html(this.template({
+			this.$el.html(_.template(template, {
 				links: this.collection.toJSON()
 			}));
 		},

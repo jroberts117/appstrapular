@@ -11,10 +11,9 @@ define([
 		template: _.template(template),
 
 		initialize: function () {
+			this.model = new Alert();
 		},
 
-		setup: function() {},
-		
 		render: function () {
 			this.$el.html(
 				this.template({
@@ -23,23 +22,26 @@ define([
 		},
 
 		events: {
-			'click #purge' : 'purgeView'
+			'click #purge': 'hideMainAlert',
+			'global alerts/showMainAlert': 'showMainAlert',
+			'global alerts/hideMainAlert': 'hideMainAlert'
 		},
 
-		purgeView: function(event) {
-			this.close();
+		showMainAlert: function (alertData) {
+			this.model.clear();
+			this.model.set(alertData);
+			this.render();
+			$('html, body').animate({
+				scrollTop: 0
+				// scrollTop: $("#alert-container").offset().top
+			}, 500);
 		},
 
-		/**
-		 * This overrides the close funciton that is prototyped for views.  This is done to ensure
-		 * the container is not removed from the page
-		 */
-
-		close: function () {
+		hideMainAlert: function (alertData) {
 			this.$el.html('');
-			this.unbind();
-			this.undelegateEvents();
+			this.model.clear();
 		}
+
 	});
 
 	return mv.views.AlertView;

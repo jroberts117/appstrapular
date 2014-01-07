@@ -14,7 +14,7 @@ define([
 		/**
 		 * Generate some sample/dummy data
 		 */
-		generateLinks: function() {
+		generateLinks: function () {
 			var link1, link2;
 
 			link1 = new Link({

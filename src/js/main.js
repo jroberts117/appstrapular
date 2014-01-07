@@ -6,6 +6,7 @@ require.config({
 		jquery: '../lib/jquery/jquery-1.10.2',
 		underscore: '../lib/underscore/underscore-1.5.2',
 		backbone: '../lib/backbone/backbone-1.1.0',
+		backboneGlobal: '../lib/backbone/backbone.global',
 		text: '../lib/require/text',
 		domReady: '../lib/require/domReady',
 		bootstrap: '../lib/bootstrap/bootstrap-3.0.3/js/bootstrap',
@@ -23,7 +24,9 @@ require.config({
 		bootstrap: {
 			deps: ['jquery']
 		},
-
+		backboneGlobal: {
+			deps: ['backbone', 'underscore']
+		},
 		'html/compiled': {
 			deps: ['core']
 		}
@@ -51,10 +54,12 @@ window.mv = { //instanciate namespace for application
 require([
 	'core',
 	'router',
+	'views/alertView',
 	'html/compiled'
-], function (core, Router) {
+], function (core, Router, AlertView) {
 
 	mv.i.router = new Router();
+	mv.i.views.alertView = new AlertView();
 	Backbone.history.start();
 
 });

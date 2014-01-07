@@ -1,13 +1,13 @@
 define([
 	'core'
-], function (core, App) {
+], function (core) {
 	var view = null; //attempting to minimize objects in memory by reusing this var for views
 	return Backbone.Router.extend({
 		initialize: function () {},
 
 		routes: {
 			'.*': 'indexView',
-			'alerts': 'alertsView'			
+			'alerts': 'alertsView'
 		},
 
 		mainContainer: '#main-container',
@@ -23,9 +23,9 @@ define([
 					.done(function () {
 						view.render();
 					})
-					.fail(function(error){
-						//show error on page
-					})
+					.fail(function (error) {
+						console.log('index view failed');
+					});
 			});
 		},
 
@@ -38,9 +38,9 @@ define([
 					.done(function () {
 						view.render();
 					})
-					.fail(function(error){
-						console.log("alert view failed");
-					})
+					.fail(function (error) {
+						console.log('alerts view failed');
+					});
 			});
 		}
 
