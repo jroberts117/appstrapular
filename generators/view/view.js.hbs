@@ -6,10 +6,10 @@
 
 define([
 	'core'
-	'text!html/{{name}}.html'
+	'text!html/tpl{{#camelize}}{{name}}{{/camelize}}.html'
 ], function (core, template) {
 
-	mv.views.{{name}}View = Backbone.View.extend({
+	mv.views.{{#camelize}}{{name}}{{/camelize}}View = Backbone.View.extend({
 
 		el: '',
 
@@ -23,5 +23,5 @@ define([
 
 	});
 
-	return mv.views.{{name}}View;
+	return mv.views.{{#camelize}}{{name}}{{/camelize}}View;
 });

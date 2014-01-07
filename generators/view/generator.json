@@ -2,11 +2,11 @@
   "files": [
     {
       "from": "view.js.hbs",
-      "to":"src/js/views/{{name}}.js"
+      "to":"src/js/views/{{uncap name}}View.js"
     },
     {
       "from": "template.html.hbs",
-      "to":"src/html/{{name}}.html"
+      "to":"src/html/tpl{{#camelize}}{{name}}{{/camelize}}.html"
     }
   ],
   "dependencies": []

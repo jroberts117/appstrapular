@@ -2,7 +2,7 @@
   "files": [
     {
       "from": "model.js.hbs",
-      "to": "src/js/models/{{name}}.js"
+      "to": "src/js/models/{{uncap name}}.js"
     }
   ],
   "dependencies": []

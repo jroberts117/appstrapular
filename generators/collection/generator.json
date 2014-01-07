@@ -2,7 +2,7 @@
   "files": [
     {
       "from": "collection.js.hbs",
-      "to": "src/js/collections/{{name}}.js"
+      "to": "src/js/collections/{{uncap pluralName}}.js"
     }
   ],
   "dependencies": []

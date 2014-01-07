@@ -8,7 +8,7 @@ define([
 	'core'
 ], function (core) {
 
-	mv.models.{{name}}Model = Backbone.Model.extend({
+	mv.models.{{#camelize}}{{name}}{{/camelize}} = Backbone.Model.extend({
 
 		defaults: {},
 
@@ -16,5 +16,5 @@ define([
 
 	});
 
-	return mv.models.{{name}}Model;
+	return mv.models.{{#camelize}}{{name}}{{/camelize}};
 });
