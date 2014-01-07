@@ -27,7 +27,9 @@ A quick start for a JS application, which includes testing &amp; building operat
 
 	1. Clone this repository to your desired directory, referred to as the "webapp" dir from here out
 	2. cd into the webapp directory
-	3. Run `npm install` from the command line
+	3. Run 'npm install -g grunt-cli' from the command line to install grunt globally
+	4. Run 'npm install -g scaffolt' from the command line to install scaffolt globally (for code generation)
+	5. Run `npm install` from the command line to install remaining local dependencies
 
 ###Workflows from command line
 
