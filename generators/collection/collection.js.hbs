@@ -6,16 +6,16 @@
 
 define([
 	'core',
-	'boilerplates/boilerplateModel'
-], function (core, BoilerplateModel) {
+	'models/{{uncap name}}'
+], function (core, {{uncap name}}) {
 
-	mv.collections.BoilerplateCollection = Backbone.Collection.extend({
+	mv.collections.{{#camelize}}{{pluralName}}{{/camelize}} = Backbone.Collection.extend({
 
 		initialize: function () {},
 
-		model: BoilerplateModel
+		model: {{uncap name}}
 
 	});
 
-	return mv.collections.BoilerplateCollection;
+	return mv.collections.{{#camelize}}{{pluralName}}{{/camelize}};
 });
