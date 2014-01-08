@@ -47,6 +47,13 @@ window.mv = { //instanciate namespace for application
 	},
 	sections: {
 		mainContainer: '#main-container'
+	},
+	enums: {
+		alertTypes: {
+			SUCCESS: 'Success',
+			WARNING: 'Warning',
+			DANGER: 'Danger'
+		}
 	}
 };
 

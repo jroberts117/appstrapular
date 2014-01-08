@@ -10,7 +10,7 @@ define([
 	  });
 		
 		it('Create success alert ', function() {
-			type = 'Success';
+			type = mv.enums.alertTypes.SUCCESS;
 			Backbone.trigger('alerts/showMainAlert', {
 				type: type,
 				icon: 'ok',
@@ -21,7 +21,7 @@ define([
 		});
 
 		it('Create success alert ', function() {
-			type = 'Warning';
+			type = mv.enums.alertTypes.WARNING;
 			Backbone.trigger('alerts/showMainAlert', {
 				type: type,
 				icon: 'minus',
@@ -31,9 +31,8 @@ define([
 			expect(alertView.model.get('type')).toEqual(type);
 		});
 
-
 		it('Create success alert ', function() {
-			type = 'Danger';
+			type = mv.enums.alertTypes.DANGER;
 			Backbone.trigger('alerts/showMainAlert', {
 				type: type,
 				icon: 'remove',
@@ -41,6 +40,32 @@ define([
 				scheme: 'danger'
 			});
 			expect(alertView.model.get('type')).toEqual(type);
+		});
+
+		it('Validate icon for success type alert ', function() {
+			type = mv.enums.alertTypes.SUCCESS;
+			Backbone.trigger('alerts/showMainAlert', {
+				type: type,
+				message: 'proper message'
+			});
+			expect(alertView.model.get('icon')).toEqual('ok');
+		});
+
+		it('Validate scheme for success type alert ', function() {
+			type = mv.enums.alertTypes.SUCCESS;
+			Backbone.trigger('alerts/showMainAlert', {
+				type: type,
+				message: 'proper message'
+			});
+			expect(alertView.model.get('scheme')).toEqual('success');
+		});
+
+		it('Create invalid alert type ', function() {
+			type = 'invalid';
+			Backbone.trigger('alerts/showMainAlert', {
+				type: type
+			});
+			expect(alertView.model.get('type')).toEqual('Default');
 		});
 
 	});

@@ -26,30 +26,24 @@ define([
 		successClick: function (event) {
 			event.preventDefault();
 			Backbone.trigger('alerts/showMainAlert', {
-				type: 'Success',
-				icon: 'ok',
-				message: 'we succeeded',
-				scheme: 'success'
+				type: mv.enums.alertTypes.SUCCESS,
+				message: 'we succeeded'
 			});
 		},
 
 		warningClick: function (event) {
 			event.preventDefault();
 			Backbone.trigger('alerts/showMainAlert', {
-				type: 'Warning',
-				icon: 'minus',
-				message: 'this could be bad',
-				scheme: 'warning'
+				type: mv.enums.alertTypes.WARNING,
+				message: 'this could be bad'
 			});
 		},
 
 		dangerClick: function (event) {
 			event.preventDefault();
 			Backbone.trigger('alerts/showMainAlert', {
-				type: 'Danger',
-				icon: 'remove',
-				message: 'all is failed',
-				scheme: 'danger'
+				type: mv.enums.alertTypes.DANGER,
+				message: 'all is failed'
 			});
 		}
 	});
