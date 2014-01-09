@@ -11,6 +11,8 @@ define([
 
 		model: Link,
 
+		url: 'fakeserver/getlinks',
+
 		/**
 		 * Generate some sample/dummy data
 		 */
@@ -48,6 +50,12 @@ define([
 			];
 			this.add(links);
 			*/
+		},
+
+		sortLinks: function () {
+			this.comparator = 'url';
+			this.sort();
+			this.comparator = '';
 		}
 
 	});

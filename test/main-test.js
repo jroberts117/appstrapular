@@ -27,7 +27,8 @@ require.config({
         bootstrap: '../lib/bootstrap/bootstrap-3.0.3/js/bootstrap',
         normalize: '../lib/require/normalize',
         css: '../lib/require/css',
-        test: '../../test'
+        test: '../../test',
+        sinon: '../lib/sinon/sinon-1.7.3'
     },
     shim: {
         underscore: {
